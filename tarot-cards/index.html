@@ -22,15 +22,7 @@
 <a id=__codelineno-1-15 name=__codelineno-1-15 href=#__codelineno-1-15></a><span class=w>        </span><span class=err>...</span>
 <a id=__codelineno-1-16 name=__codelineno-1-16 href=#__codelineno-1-16></a><span class=w>    </span><span class=p>]</span>
 <a id=__codelineno-1-17 name=__codelineno-1-17 href=#__codelineno-1-17></a><span class=p>}</span>
-</code></pre></div> </div> <details class=quote> <summary>Source code in <code>api/index.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-177>177</a></span>
-<span class=normal><a href=#__codelineno-0-178>178</a></span>
-<span class=normal><a href=#__codelineno-0-179>179</a></span>
-<span class=normal><a href=#__codelineno-0-180>180</a></span>
-<span class=normal><a href=#__codelineno-0-181>181</a></span>
-<span class=normal><a href=#__codelineno-0-182>182</a></span>
-<span class=normal><a href=#__codelineno-0-183>183</a></span>
-<span class=normal><a href=#__codelineno-0-184>184</a></span>
-<span class=normal><a href=#__codelineno-0-185>185</a></span>
+</code></pre></div> </div> <details class=quote> <summary>Source code in <code>api/index.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-185>185</a></span>
 <span class=normal><a href=#__codelineno-0-186>186</a></span>
 <span class=normal><a href=#__codelineno-0-187>187</a></span>
 <span class=normal><a href=#__codelineno-0-188>188</a></span>
@@ -78,63 +70,71 @@
 <span class=normal><a href=#__codelineno-0-230>230</a></span>
 <span class=normal><a href=#__codelineno-0-231>231</a></span>
 <span class=normal><a href=#__codelineno-0-232>232</a></span>
-<span class=normal><a href=#__codelineno-0-233>233</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-177 name=__codelineno-0-177></a><span class=nd>@app</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=s2>&quot;/tarot-cards/draw&quot;</span><span class=p>,</span> <span class=n>response_model</span><span class=o>=</span><span class=n>CardsAPIResponse</span><span class=p>,</span> <span class=n>tags</span><span class=o>=</span><span class=p>[</span><span class=s2>&quot;Tarot Cards API&quot;</span><span class=p>])</span>
-<a id=__codelineno-0-178 name=__codelineno-0-178></a><span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>draw_cards</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n>CardsAPIRequest</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>CardsAPIResponse</span><span class=p>:</span>
-<a id=__codelineno-0-179 name=__codelineno-0-179></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
-<a id=__codelineno-0-180 name=__codelineno-0-180></a><span class=sd>    | Method | Path                       | Description                                       |</span>
-<a id=__codelineno-0-181 name=__codelineno-0-181></a><span class=sd>    | ------ | -------------------------- | ------------------------------------------------- |</span>
-<a id=__codelineno-0-182 name=__codelineno-0-182></a><span class=sd>    | `POST` | `/tarot-cards/draw`        | Get shuffled tarot cards                          |</span>
-<a id=__codelineno-0-183 name=__codelineno-0-183></a>
-<a id=__codelineno-0-184 name=__codelineno-0-184></a><span class=sd>    Params:</span>
-<a id=__codelineno-0-185 name=__codelineno-0-185></a><span class=sd>        request (CardsAPIRequest): The request object containing the name, dob, and count.</span>
-<a id=__codelineno-0-186 name=__codelineno-0-186></a>
-<a id=__codelineno-0-187 name=__codelineno-0-187></a><span class=sd>    Returns:</span>
-<a id=__codelineno-0-188 name=__codelineno-0-188></a><span class=sd>        CardsAPIResponse: The response object containing the cards.</span>
-<a id=__codelineno-0-189 name=__codelineno-0-189></a>
-<a id=__codelineno-0-190 name=__codelineno-0-190></a><span class=sd>    !!! note</span>
-<a id=__codelineno-0-191 name=__codelineno-0-191></a><span class=sd>        This function uses the `get_shuffled_cards` function to get the shuffled tarot cards.</span>
-<a id=__codelineno-0-192 name=__codelineno-0-192></a>
-<a id=__codelineno-0-193 name=__codelineno-0-193></a><span class=sd>    !!! example &quot;Example Request&quot;</span>
+<span class=normal><a href=#__codelineno-0-233>233</a></span>
+<span class=normal><a href=#__codelineno-0-234>234</a></span>
+<span class=normal><a href=#__codelineno-0-235>235</a></span>
+<span class=normal><a href=#__codelineno-0-236>236</a></span>
+<span class=normal><a href=#__codelineno-0-237>237</a></span>
+<span class=normal><a href=#__codelineno-0-238>238</a></span>
+<span class=normal><a href=#__codelineno-0-239>239</a></span>
+<span class=normal><a href=#__codelineno-0-240>240</a></span>
+<span class=normal><a href=#__codelineno-0-241>241</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-185 name=__codelineno-0-185></a><span class=nd>@app</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=s2>&quot;/tarot-cards/draw&quot;</span><span class=p>,</span> <span class=n>response_model</span><span class=o>=</span><span class=n>CardsAPIResponse</span><span class=p>,</span> <span class=n>tags</span><span class=o>=</span><span class=p>[</span><span class=s2>&quot;Tarot Cards API&quot;</span><span class=p>])</span>
+<a id=__codelineno-0-186 name=__codelineno-0-186></a><span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>draw_cards</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n>CardsAPIRequest</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>CardsAPIResponse</span><span class=p>:</span>
+<a id=__codelineno-0-187 name=__codelineno-0-187></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-0-188 name=__codelineno-0-188></a><span class=sd>    | Method | Path                       | Description                                       |</span>
+<a id=__codelineno-0-189 name=__codelineno-0-189></a><span class=sd>    | ------ | -------------------------- | ------------------------------------------------- |</span>
+<a id=__codelineno-0-190 name=__codelineno-0-190></a><span class=sd>    | `POST` | `/tarot-cards/draw`        | Get shuffled tarot cards                          |</span>
+<a id=__codelineno-0-191 name=__codelineno-0-191></a>
+<a id=__codelineno-0-192 name=__codelineno-0-192></a><span class=sd>    Params:</span>
+<a id=__codelineno-0-193 name=__codelineno-0-193></a><span class=sd>        request (CardsAPIRequest): The request object containing the name, dob, and count.</span>
 <a id=__codelineno-0-194 name=__codelineno-0-194></a>
-<a id=__codelineno-0-195 name=__codelineno-0-195></a><span class=sd>        ```json</span>
-<a id=__codelineno-0-196 name=__codelineno-0-196></a><span class=sd>        {</span>
-<a id=__codelineno-0-197 name=__codelineno-0-197></a><span class=sd>            &quot;name&quot;: &quot;John Doe&quot;,</span>
-<a id=__codelineno-0-198 name=__codelineno-0-198></a><span class=sd>            &quot;dob&quot;: &quot;2000-01-01&quot;,</span>
-<a id=__codelineno-0-199 name=__codelineno-0-199></a><span class=sd>            &quot;count&quot;: 5,</span>
-<a id=__codelineno-0-200 name=__codelineno-0-200></a><span class=sd>            &quot;follow_numerology&quot;: false</span>
-<a id=__codelineno-0-201 name=__codelineno-0-201></a><span class=sd>        }</span>
-<a id=__codelineno-0-202 name=__codelineno-0-202></a><span class=sd>        ```</span>
-<a id=__codelineno-0-203 name=__codelineno-0-203></a>
-<a id=__codelineno-0-204 name=__codelineno-0-204></a><span class=sd>    !!! example &quot;Example Response&quot;</span>
-<a id=__codelineno-0-205 name=__codelineno-0-205></a>
-<a id=__codelineno-0-206 name=__codelineno-0-206></a><span class=sd>        ```json</span>
-<a id=__codelineno-0-207 name=__codelineno-0-207></a><span class=sd>        {</span>
-<a id=__codelineno-0-208 name=__codelineno-0-208></a><span class=sd>            &quot;cards&quot;: [</span>
-<a id=__codelineno-0-209 name=__codelineno-0-209></a><span class=sd>                {</span>
-<a id=__codelineno-0-210 name=__codelineno-0-210></a><span class=sd>                    &quot;name&quot;: &quot;Eight of Pentacles&quot;,</span>
-<a id=__codelineno-0-211 name=__codelineno-0-211></a><span class=sd>                    &quot;is_upright&quot;: false,</span>
-<a id=__codelineno-0-212 name=__codelineno-0-212></a><span class=sd>                    &quot;image_url&quot;: &quot;/tarot-cards/images/72.jpg&quot;,</span>
-<a id=__codelineno-0-213 name=__codelineno-0-213></a><span class=sd>                    &quot;full_card_name&quot;: &quot;Eight of Pentacles (REVERSED)&quot;</span>
-<a id=__codelineno-0-214 name=__codelineno-0-214></a><span class=sd>                },</span>
-<a id=__codelineno-0-215 name=__codelineno-0-215></a><span class=sd>                {</span>
-<a id=__codelineno-0-216 name=__codelineno-0-216></a><span class=sd>                    &quot;name&quot;: &quot;King of Cups&quot;,</span>
-<a id=__codelineno-0-217 name=__codelineno-0-217></a><span class=sd>                    &quot;is_upright&quot;: false,</span>
-<a id=__codelineno-0-218 name=__codelineno-0-218></a><span class=sd>                    &quot;image_url&quot;: &quot;/tarot-cards/images/36.jpg&quot;,</span>
-<a id=__codelineno-0-219 name=__codelineno-0-219></a><span class=sd>                    &quot;full_card_name&quot;: &quot;King of Cups (REVERSED)&quot;</span>
-<a id=__codelineno-0-220 name=__codelineno-0-220></a><span class=sd>                },</span>
-<a id=__codelineno-0-221 name=__codelineno-0-221></a><span class=sd>                ...</span>
-<a id=__codelineno-0-222 name=__codelineno-0-222></a><span class=sd>            ]</span>
-<a id=__codelineno-0-223 name=__codelineno-0-223></a><span class=sd>        }</span>
-<a id=__codelineno-0-224 name=__codelineno-0-224></a><span class=sd>        ```</span>
-<a id=__codelineno-0-225 name=__codelineno-0-225></a><span class=sd>    &quot;&quot;&quot;</span>
-<a id=__codelineno-0-226 name=__codelineno-0-226></a>    <span class=k>if</span> <span class=n>request</span><span class=o>.</span><span class=n>follow_numerology</span><span class=p>:</span>
-<a id=__codelineno-0-227 name=__codelineno-0-227></a>        <span class=n>universe_number</span> <span class=o>=</span> <span class=n>NUMEROLOGY_READER</span><span class=o>.</span><span class=n>calculate</span><span class=p>(</span><span class=n>request</span><span class=o>.</span><span class=n>name</span><span class=p>,</span> <span class=n>request</span><span class=o>.</span><span class=n>dob</span><span class=p>)[</span><span class=s2>&quot;personal_numerology&quot;</span><span class=p>]</span>
-<a id=__codelineno-0-228 name=__codelineno-0-228></a>    <span class=k>else</span><span class=p>:</span>
-<a id=__codelineno-0-229 name=__codelineno-0-229></a>        <span class=n>universe_number</span> <span class=o>=</span> <span class=kc>None</span>
-<a id=__codelineno-0-230 name=__codelineno-0-230></a>
-<a id=__codelineno-0-231 name=__codelineno-0-231></a>    <span class=n>tarot_deck</span> <span class=o>=</span> <span class=n>TarotDeck</span><span class=p>(</span><span class=n>seed</span><span class=o>=</span><span class=n>universe_number</span><span class=p>)</span>
-<a id=__codelineno-0-232 name=__codelineno-0-232></a>    <span class=n>shuffled_cards</span> <span class=o>=</span> <span class=n>tarot_deck</span><span class=o>.</span><span class=n>draw</span><span class=p>(</span><span class=n>count</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>count</span><span class=p>)</span>
-<a id=__codelineno-0-233 name=__codelineno-0-233></a>    <span class=k>return</span> <span class=n>CardsAPIResponse</span><span class=p>(</span><span class=n>cards</span><span class=o>=</span><span class=n>shuffled_cards</span><span class=p>)</span>
+<a id=__codelineno-0-195 name=__codelineno-0-195></a><span class=sd>    Returns:</span>
+<a id=__codelineno-0-196 name=__codelineno-0-196></a><span class=sd>        CardsAPIResponse: The response object containing the cards.</span>
+<a id=__codelineno-0-197 name=__codelineno-0-197></a>
+<a id=__codelineno-0-198 name=__codelineno-0-198></a><span class=sd>    !!! note</span>
+<a id=__codelineno-0-199 name=__codelineno-0-199></a><span class=sd>        This function uses the `get_shuffled_cards` function to get the shuffled tarot cards.</span>
+<a id=__codelineno-0-200 name=__codelineno-0-200></a>
+<a id=__codelineno-0-201 name=__codelineno-0-201></a><span class=sd>    !!! example &quot;Example Request&quot;</span>
+<a id=__codelineno-0-202 name=__codelineno-0-202></a>
+<a id=__codelineno-0-203 name=__codelineno-0-203></a><span class=sd>        ```json</span>
+<a id=__codelineno-0-204 name=__codelineno-0-204></a><span class=sd>        {</span>
+<a id=__codelineno-0-205 name=__codelineno-0-205></a><span class=sd>            &quot;name&quot;: &quot;John Doe&quot;,</span>
+<a id=__codelineno-0-206 name=__codelineno-0-206></a><span class=sd>            &quot;dob&quot;: &quot;2000-01-01&quot;,</span>
+<a id=__codelineno-0-207 name=__codelineno-0-207></a><span class=sd>            &quot;count&quot;: 5,</span>
+<a id=__codelineno-0-208 name=__codelineno-0-208></a><span class=sd>            &quot;follow_numerology&quot;: false</span>
+<a id=__codelineno-0-209 name=__codelineno-0-209></a><span class=sd>        }</span>
+<a id=__codelineno-0-210 name=__codelineno-0-210></a><span class=sd>        ```</span>
+<a id=__codelineno-0-211 name=__codelineno-0-211></a>
+<a id=__codelineno-0-212 name=__codelineno-0-212></a><span class=sd>    !!! example &quot;Example Response&quot;</span>
+<a id=__codelineno-0-213 name=__codelineno-0-213></a>
+<a id=__codelineno-0-214 name=__codelineno-0-214></a><span class=sd>        ```json</span>
+<a id=__codelineno-0-215 name=__codelineno-0-215></a><span class=sd>        {</span>
+<a id=__codelineno-0-216 name=__codelineno-0-216></a><span class=sd>            &quot;cards&quot;: [</span>
+<a id=__codelineno-0-217 name=__codelineno-0-217></a><span class=sd>                {</span>
+<a id=__codelineno-0-218 name=__codelineno-0-218></a><span class=sd>                    &quot;name&quot;: &quot;Eight of Pentacles&quot;,</span>
+<a id=__codelineno-0-219 name=__codelineno-0-219></a><span class=sd>                    &quot;is_upright&quot;: false,</span>
+<a id=__codelineno-0-220 name=__codelineno-0-220></a><span class=sd>                    &quot;image_url&quot;: &quot;/tarot-cards/images/72.jpg&quot;,</span>
+<a id=__codelineno-0-221 name=__codelineno-0-221></a><span class=sd>                    &quot;full_card_name&quot;: &quot;Eight of Pentacles (REVERSED)&quot;</span>
+<a id=__codelineno-0-222 name=__codelineno-0-222></a><span class=sd>                },</span>
+<a id=__codelineno-0-223 name=__codelineno-0-223></a><span class=sd>                {</span>
+<a id=__codelineno-0-224 name=__codelineno-0-224></a><span class=sd>                    &quot;name&quot;: &quot;King of Cups&quot;,</span>
+<a id=__codelineno-0-225 name=__codelineno-0-225></a><span class=sd>                    &quot;is_upright&quot;: false,</span>
+<a id=__codelineno-0-226 name=__codelineno-0-226></a><span class=sd>                    &quot;image_url&quot;: &quot;/tarot-cards/images/36.jpg&quot;,</span>
+<a id=__codelineno-0-227 name=__codelineno-0-227></a><span class=sd>                    &quot;full_card_name&quot;: &quot;King of Cups (REVERSED)&quot;</span>
+<a id=__codelineno-0-228 name=__codelineno-0-228></a><span class=sd>                },</span>
+<a id=__codelineno-0-229 name=__codelineno-0-229></a><span class=sd>                ...</span>
+<a id=__codelineno-0-230 name=__codelineno-0-230></a><span class=sd>            ]</span>
+<a id=__codelineno-0-231 name=__codelineno-0-231></a><span class=sd>        }</span>
+<a id=__codelineno-0-232 name=__codelineno-0-232></a><span class=sd>        ```</span>
+<a id=__codelineno-0-233 name=__codelineno-0-233></a><span class=sd>    &quot;&quot;&quot;</span>
+<a id=__codelineno-0-234 name=__codelineno-0-234></a>    <span class=k>if</span> <span class=n>request</span><span class=o>.</span><span class=n>follow_numerology</span><span class=p>:</span>
+<a id=__codelineno-0-235 name=__codelineno-0-235></a>        <span class=n>universe_number</span> <span class=o>=</span> <span class=n>NUMEROLOGY_READER</span><span class=o>.</span><span class=n>calculate</span><span class=p>(</span><span class=n>request</span><span class=o>.</span><span class=n>name</span><span class=p>,</span> <span class=n>request</span><span class=o>.</span><span class=n>dob</span><span class=p>)[</span><span class=s2>&quot;personal_numerology&quot;</span><span class=p>]</span>
+<a id=__codelineno-0-236 name=__codelineno-0-236></a>    <span class=k>else</span><span class=p>:</span>
+<a id=__codelineno-0-237 name=__codelineno-0-237></a>        <span class=n>universe_number</span> <span class=o>=</span> <span class=kc>None</span>
+<a id=__codelineno-0-238 name=__codelineno-0-238></a>
+<a id=__codelineno-0-239 name=__codelineno-0-239></a>    <span class=n>tarot_deck</span> <span class=o>=</span> <span class=n>TarotDeck</span><span class=p>(</span><span class=n>seed</span><span class=o>=</span><span class=n>universe_number</span><span class=p>)</span>
+<a id=__codelineno-0-240 name=__codelineno-0-240></a>    <span class=n>shuffled_cards</span> <span class=o>=</span> <span class=n>tarot_deck</span><span class=o>.</span><span class=n>draw</span><span class=p>(</span><span class=n>count</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>count</span><span class=p>)</span>
+<a id=__codelineno-0-241 name=__codelineno-0-241></a>    <span class=k>return</span> <span class=n>CardsAPIResponse</span><span class=p>(</span><span class=n>cards</span><span class=o>=</span><span class=n>shuffled_cards</span><span class=p>)</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h3 id=index.get_card_info class="doc doc-heading"> <code class="doc-symbol doc-symbol-heading doc-symbol-function"></code> <span class="doc doc-object-name doc-function-name">get_card_info</span> </h3> <div class="doc-signature highlight"><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=nf>get_card_info</span><span class=p>(</span><span class=n>card_number</span><span class=p>:</span> <span class=n><span title=int>int</span></span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n><span title=api.models.CardInfoAPIResponse>CardInfoAPIResponse</span></span>
 </code></pre></div> <div class="doc doc-contents first"> <table> <thead> <tr> <th>Method</th> <th>Path</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><code>GET</code></td> <td><code>/tarot-cards/get-card-info</code></td> <td>Get card info by number</td> </tr> </tbody> </table> <table> <thead> <tr> <th><span class=doc-section-title>PARAMETER</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td> <code>card_number</code> </td> <td class=doc-param-details> <div class=doc-md-description> <p>The card number (Range: 1-78).</p> </div> <p> <span class=doc-param-annotation> <b>TYPE:</b> <code><span title=int>int</span></code> </span> </p> </td> </tr> </tbody> </table> <table> <thead> <tr> <th><span class=doc-section-title>RETURNS</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td> <code>CardInfoAPIResponse</code> </td> <td class=doc-returns-details> <div class=doc-md-description> <p>The response object containing the card info.</p> </div> <p> <span class=doc-returns-annotation> <b>TYPE:</b> <code><span title=api.models.CardInfoAPIResponse>CardInfoAPIResponse</span></code> </span> </p> </td> </tr> </tbody> </table> <div class="admonition note"> <p class=admonition-title>Note</p> <p>This function uses the <code>TarotDeck</code> class to get the card info.</p> </div> <div class="admonition example"> <p class=admonition-title>Example Response</p> <div class=highlight><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=p>{</span>
 <a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a><span class=w>    </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;The Fool&quot;</span><span class=p>,</span>
@@ -152,15 +152,7 @@
 <a id=__codelineno-0-14 name=__codelineno-0-14 href=#__codelineno-0-14></a><span class=w>    </span><span class=nt>&quot;mythical_spiritual&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;...&quot;</span><span class=p>,</span>
 <a id=__codelineno-0-15 name=__codelineno-0-15 href=#__codelineno-0-15></a><span class=w>    </span><span class=nt>&quot;questions_to_ask&quot;</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=s2>&quot;...&quot;</span><span class=p>]</span>
 <a id=__codelineno-0-16 name=__codelineno-0-16 href=#__codelineno-0-16></a><span class=p>}</span>
-</code></pre></div> </div> <details class=quote> <summary>Source code in <code>api/index.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-236>236</a></span>
-<span class=normal><a href=#__codelineno-0-237>237</a></span>
-<span class=normal><a href=#__codelineno-0-238>238</a></span>
-<span class=normal><a href=#__codelineno-0-239>239</a></span>
-<span class=normal><a href=#__codelineno-0-240>240</a></span>
-<span class=normal><a href=#__codelineno-0-241>241</a></span>
-<span class=normal><a href=#__codelineno-0-242>242</a></span>
-<span class=normal><a href=#__codelineno-0-243>243</a></span>
-<span class=normal><a href=#__codelineno-0-244>244</a></span>
+</code></pre></div> </div> <details class=quote> <summary>Source code in <code>api/index.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-244>244</a></span>
 <span class=normal><a href=#__codelineno-0-245>245</a></span>
 <span class=normal><a href=#__codelineno-0-246>246</a></span>
 <span class=normal><a href=#__codelineno-0-247>247</a></span>
@@ -194,49 +186,57 @@
 <span class=normal><a href=#__codelineno-0-275>275</a></span>
 <span class=normal><a href=#__codelineno-0-276>276</a></span>
 <span class=normal><a href=#__codelineno-0-277>277</a></span>
-<span class=normal><a href=#__codelineno-0-278>278</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-236 name=__codelineno-0-236></a><span class=nd>@app</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s2>&quot;/tarot-cards/get-card-info&quot;</span><span class=p>,</span> <span class=n>response_model</span><span class=o>=</span><span class=n>CardInfoAPIResponse</span><span class=p>,</span> <span class=n>tags</span><span class=o>=</span><span class=p>[</span><span class=s2>&quot;Tarot Cards API&quot;</span><span class=p>])</span>
-<a id=__codelineno-0-237 name=__codelineno-0-237></a><span class=k>def</span><span class=w> </span><span class=nf>get_card_info</span><span class=p>(</span><span class=n>card_number</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>CardInfoAPIResponse</span><span class=p>:</span>
-<a id=__codelineno-0-238 name=__codelineno-0-238></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
-<a id=__codelineno-0-239 name=__codelineno-0-239></a><span class=sd>    | Method | Path                                  | Description                                 |</span>
-<a id=__codelineno-0-240 name=__codelineno-0-240></a><span class=sd>    | ------ | ------------------------------------- | ------------------------------------------- |</span>
-<a id=__codelineno-0-241 name=__codelineno-0-241></a><span class=sd>    | `GET`  | `/tarot-cards/get-card-info`          | Get card info by number                     |</span>
-<a id=__codelineno-0-242 name=__codelineno-0-242></a>
-<a id=__codelineno-0-243 name=__codelineno-0-243></a><span class=sd>    Params:</span>
-<a id=__codelineno-0-244 name=__codelineno-0-244></a><span class=sd>        card_number (int): The card number (Range: 1-78).</span>
-<a id=__codelineno-0-245 name=__codelineno-0-245></a>
-<a id=__codelineno-0-246 name=__codelineno-0-246></a><span class=sd>    Returns:</span>
-<a id=__codelineno-0-247 name=__codelineno-0-247></a><span class=sd>        CardInfoAPIResponse: The response object containing the card info.</span>
-<a id=__codelineno-0-248 name=__codelineno-0-248></a>
-<a id=__codelineno-0-249 name=__codelineno-0-249></a><span class=sd>    !!! note</span>
-<a id=__codelineno-0-250 name=__codelineno-0-250></a><span class=sd>        This function uses the `TarotDeck` class to get the card info.</span>
-<a id=__codelineno-0-251 name=__codelineno-0-251></a>
-<a id=__codelineno-0-252 name=__codelineno-0-252></a><span class=sd>    !!! example &quot;Example Response&quot;</span>
+<span class=normal><a href=#__codelineno-0-278>278</a></span>
+<span class=normal><a href=#__codelineno-0-279>279</a></span>
+<span class=normal><a href=#__codelineno-0-280>280</a></span>
+<span class=normal><a href=#__codelineno-0-281>281</a></span>
+<span class=normal><a href=#__codelineno-0-282>282</a></span>
+<span class=normal><a href=#__codelineno-0-283>283</a></span>
+<span class=normal><a href=#__codelineno-0-284>284</a></span>
+<span class=normal><a href=#__codelineno-0-285>285</a></span>
+<span class=normal><a href=#__codelineno-0-286>286</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-244 name=__codelineno-0-244></a><span class=nd>@app</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s2>&quot;/tarot-cards/get-card-info&quot;</span><span class=p>,</span> <span class=n>response_model</span><span class=o>=</span><span class=n>CardInfoAPIResponse</span><span class=p>,</span> <span class=n>tags</span><span class=o>=</span><span class=p>[</span><span class=s2>&quot;Tarot Cards API&quot;</span><span class=p>])</span>
+<a id=__codelineno-0-245 name=__codelineno-0-245></a><span class=k>def</span><span class=w> </span><span class=nf>get_card_info</span><span class=p>(</span><span class=n>card_number</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>CardInfoAPIResponse</span><span class=p>:</span>
+<a id=__codelineno-0-246 name=__codelineno-0-246></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-0-247 name=__codelineno-0-247></a><span class=sd>    | Method | Path                                  | Description                                 |</span>
+<a id=__codelineno-0-248 name=__codelineno-0-248></a><span class=sd>    | ------ | ------------------------------------- | ------------------------------------------- |</span>
+<a id=__codelineno-0-249 name=__codelineno-0-249></a><span class=sd>    | `GET`  | `/tarot-cards/get-card-info`          | Get card info by number                     |</span>
+<a id=__codelineno-0-250 name=__codelineno-0-250></a>
+<a id=__codelineno-0-251 name=__codelineno-0-251></a><span class=sd>    Params:</span>
+<a id=__codelineno-0-252 name=__codelineno-0-252></a><span class=sd>        card_number (int): The card number (Range: 1-78).</span>
 <a id=__codelineno-0-253 name=__codelineno-0-253></a>
-<a id=__codelineno-0-254 name=__codelineno-0-254></a><span class=sd>        ```json</span>
-<a id=__codelineno-0-255 name=__codelineno-0-255></a><span class=sd>        {</span>
-<a id=__codelineno-0-256 name=__codelineno-0-256></a><span class=sd>            &quot;name&quot;: &quot;The Fool&quot;,</span>
-<a id=__codelineno-0-257 name=__codelineno-0-257></a><span class=sd>            &quot;number&quot;: &quot;1&quot;,</span>
-<a id=__codelineno-0-258 name=__codelineno-0-258></a><span class=sd>            &quot;arcana&quot;: &quot;The Fool&quot;,</span>
-<a id=__codelineno-0-259 name=__codelineno-0-259></a><span class=sd>            &quot;suit&quot;: &quot;Major Arcana&quot;,</span>
-<a id=__codelineno-0-260 name=__codelineno-0-260></a><span class=sd>            &quot;image_url&quot;: &quot;/tarot-cards/images/1.jpg&quot;,</span>
-<a id=__codelineno-0-261 name=__codelineno-0-261></a><span class=sd>            &quot;fortune_telling&quot;: [&quot;...&quot;],</span>
-<a id=__codelineno-0-262 name=__codelineno-0-262></a><span class=sd>            &quot;keywords&quot;: [&quot;...&quot;],</span>
-<a id=__codelineno-0-263 name=__codelineno-0-263></a><span class=sd>            &quot;meanings&quot;: {...},</span>
-<a id=__codelineno-0-264 name=__codelineno-0-264></a><span class=sd>            &quot;archetype&quot;: &quot;...&quot;,</span>
-<a id=__codelineno-0-265 name=__codelineno-0-265></a><span class=sd>            &quot;hebrew_alphabet&quot;: &quot;...&quot;,</span>
-<a id=__codelineno-0-266 name=__codelineno-0-266></a><span class=sd>            &quot;numerology&quot;: &quot;...&quot;,</span>
-<a id=__codelineno-0-267 name=__codelineno-0-267></a><span class=sd>            &quot;elemental&quot;: &quot;...&quot;,</span>
-<a id=__codelineno-0-268 name=__codelineno-0-268></a><span class=sd>            &quot;mythical_spiritual&quot;: &quot;...&quot;,</span>
-<a id=__codelineno-0-269 name=__codelineno-0-269></a><span class=sd>            &quot;questions_to_ask&quot;: [&quot;...&quot;]</span>
-<a id=__codelineno-0-270 name=__codelineno-0-270></a><span class=sd>        }</span>
-<a id=__codelineno-0-271 name=__codelineno-0-271></a><span class=sd>        ```</span>
-<a id=__codelineno-0-272 name=__codelineno-0-272></a><span class=sd>    &quot;&quot;&quot;</span>
-<a id=__codelineno-0-273 name=__codelineno-0-273></a>    <span class=k>if</span> <span class=ow>not</span> <span class=mi>1</span> <span class=o>&lt;=</span> <span class=n>card_number</span> <span class=o>&lt;=</span> <span class=mi>78</span><span class=p>:</span>
-<a id=__codelineno-0-274 name=__codelineno-0-274></a>        <span class=k>raise</span> <span class=n>HTTPException</span><span class=p>(</span><span class=n>status_code</span><span class=o>=</span><span class=mi>400</span><span class=p>,</span> <span class=n>detail</span><span class=o>=</span><span class=s2>&quot;Card number must be between 1 and 78&quot;</span><span class=p>)</span>
-<a id=__codelineno-0-275 name=__codelineno-0-275></a>
-<a id=__codelineno-0-276 name=__codelineno-0-276></a>    <span class=n>tarot_deck</span> <span class=o>=</span> <span class=n>TarotDeck</span><span class=p>()</span>
-<a id=__codelineno-0-277 name=__codelineno-0-277></a>    <span class=n>card_info</span> <span class=o>=</span> <span class=n>tarot_deck</span><span class=o>.</span><span class=n>get_card_info</span><span class=p>(</span><span class=n>card_number</span><span class=p>)</span>
-<a id=__codelineno-0-278 name=__codelineno-0-278></a>    <span class=k>return</span> <span class=n>CardInfoAPIResponse</span><span class=p>(</span><span class=o>**</span><span class=n>card_info</span><span class=p>)</span>
+<a id=__codelineno-0-254 name=__codelineno-0-254></a><span class=sd>    Returns:</span>
+<a id=__codelineno-0-255 name=__codelineno-0-255></a><span class=sd>        CardInfoAPIResponse: The response object containing the card info.</span>
+<a id=__codelineno-0-256 name=__codelineno-0-256></a>
+<a id=__codelineno-0-257 name=__codelineno-0-257></a><span class=sd>    !!! note</span>
+<a id=__codelineno-0-258 name=__codelineno-0-258></a><span class=sd>        This function uses the `TarotDeck` class to get the card info.</span>
+<a id=__codelineno-0-259 name=__codelineno-0-259></a>
+<a id=__codelineno-0-260 name=__codelineno-0-260></a><span class=sd>    !!! example &quot;Example Response&quot;</span>
+<a id=__codelineno-0-261 name=__codelineno-0-261></a>
+<a id=__codelineno-0-262 name=__codelineno-0-262></a><span class=sd>        ```json</span>
+<a id=__codelineno-0-263 name=__codelineno-0-263></a><span class=sd>        {</span>
+<a id=__codelineno-0-264 name=__codelineno-0-264></a><span class=sd>            &quot;name&quot;: &quot;The Fool&quot;,</span>
+<a id=__codelineno-0-265 name=__codelineno-0-265></a><span class=sd>            &quot;number&quot;: &quot;1&quot;,</span>
+<a id=__codelineno-0-266 name=__codelineno-0-266></a><span class=sd>            &quot;arcana&quot;: &quot;The Fool&quot;,</span>
+<a id=__codelineno-0-267 name=__codelineno-0-267></a><span class=sd>            &quot;suit&quot;: &quot;Major Arcana&quot;,</span>
+<a id=__codelineno-0-268 name=__codelineno-0-268></a><span class=sd>            &quot;image_url&quot;: &quot;/tarot-cards/images/1.jpg&quot;,</span>
+<a id=__codelineno-0-269 name=__codelineno-0-269></a><span class=sd>            &quot;fortune_telling&quot;: [&quot;...&quot;],</span>
+<a id=__codelineno-0-270 name=__codelineno-0-270></a><span class=sd>            &quot;keywords&quot;: [&quot;...&quot;],</span>
+<a id=__codelineno-0-271 name=__codelineno-0-271></a><span class=sd>            &quot;meanings&quot;: {...},</span>
+<a id=__codelineno-0-272 name=__codelineno-0-272></a><span class=sd>            &quot;archetype&quot;: &quot;...&quot;,</span>
+<a id=__codelineno-0-273 name=__codelineno-0-273></a><span class=sd>            &quot;hebrew_alphabet&quot;: &quot;...&quot;,</span>
+<a id=__codelineno-0-274 name=__codelineno-0-274></a><span class=sd>            &quot;numerology&quot;: &quot;...&quot;,</span>
+<a id=__codelineno-0-275 name=__codelineno-0-275></a><span class=sd>            &quot;elemental&quot;: &quot;...&quot;,</span>
+<a id=__codelineno-0-276 name=__codelineno-0-276></a><span class=sd>            &quot;mythical_spiritual&quot;: &quot;...&quot;,</span>
+<a id=__codelineno-0-277 name=__codelineno-0-277></a><span class=sd>            &quot;questions_to_ask&quot;: [&quot;...&quot;]</span>
+<a id=__codelineno-0-278 name=__codelineno-0-278></a><span class=sd>        }</span>
+<a id=__codelineno-0-279 name=__codelineno-0-279></a><span class=sd>        ```</span>
+<a id=__codelineno-0-280 name=__codelineno-0-280></a><span class=sd>    &quot;&quot;&quot;</span>
+<a id=__codelineno-0-281 name=__codelineno-0-281></a>    <span class=k>if</span> <span class=ow>not</span> <span class=mi>1</span> <span class=o>&lt;=</span> <span class=n>card_number</span> <span class=o>&lt;=</span> <span class=mi>78</span><span class=p>:</span>
+<a id=__codelineno-0-282 name=__codelineno-0-282></a>        <span class=k>raise</span> <span class=n>HTTPException</span><span class=p>(</span><span class=n>status_code</span><span class=o>=</span><span class=mi>400</span><span class=p>,</span> <span class=n>detail</span><span class=o>=</span><span class=s2>&quot;Card number must be between 1 and 78&quot;</span><span class=p>)</span>
+<a id=__codelineno-0-283 name=__codelineno-0-283></a>
+<a id=__codelineno-0-284 name=__codelineno-0-284></a>    <span class=n>tarot_deck</span> <span class=o>=</span> <span class=n>TarotDeck</span><span class=p>()</span>
+<a id=__codelineno-0-285 name=__codelineno-0-285></a>    <span class=n>card_info</span> <span class=o>=</span> <span class=n>tarot_deck</span><span class=o>.</span><span class=n>get_card_info</span><span class=p>(</span><span class=n>card_number</span><span class=p>)</span>
+<a id=__codelineno-0-286 name=__codelineno-0-286></a>    <span class=k>return</span> <span class=n>CardInfoAPIResponse</span><span class=p>(</span><span class=o>**</span><span class=n>card_info</span><span class=p>)</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div><h2 id=models-reference>Models Reference</h2> <div class="doc doc-object doc-class"> <h3 id=models.TarotCard class="doc doc-heading"> <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code> <span class="doc doc-object-name doc-class-name">TarotCard</span> <span class="doc doc-labels"> <small class="doc doc-label doc-label-pydantic-model"><code>pydantic-model</code></small> </span> </h3> <div class="doc doc-contents first"> <details><summary>Show JSON schema:</summary> <div class=highlight><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=p>{</span>
 <a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a><span class=w>  </span><span class=nt>&quot;properties&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
 <a id=__codelineno-0-3 name=__codelineno-0-3 href=#__codelineno-0-3></a><span class=w>    </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>

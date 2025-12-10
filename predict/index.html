@@ -38,15 +38,7 @@
 <a id=__codelineno-1-21 name=__codelineno-1-21 href=#__codelineno-1-21></a><span class=w>    </span><span class=p>],</span>
 <a id=__codelineno-1-22 name=__codelineno-1-22 href=#__codelineno-1-22></a><span class=w>    </span><span class=nt>&quot;summary&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;...&quot;</span>
 <a id=__codelineno-1-23 name=__codelineno-1-23 href=#__codelineno-1-23></a><span class=p>}</span>
-</code></pre></div> </div> <details class=quote> <summary>Source code in <code>api/index.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-43> 43</a></span>
-<span class=normal><a href=#__codelineno-0-44> 44</a></span>
-<span class=normal><a href=#__codelineno-0-45> 45</a></span>
-<span class=normal><a href=#__codelineno-0-46> 46</a></span>
-<span class=normal><a href=#__codelineno-0-47> 47</a></span>
-<span class=normal><a href=#__codelineno-0-48> 48</a></span>
-<span class=normal><a href=#__codelineno-0-49> 49</a></span>
-<span class=normal><a href=#__codelineno-0-50> 50</a></span>
-<span class=normal><a href=#__codelineno-0-51> 51</a></span>
+</code></pre></div> </div> <details class=quote> <summary>Source code in <code>api/index.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-51> 51</a></span>
 <span class=normal><a href=#__codelineno-0-52> 52</a></span>
 <span class=normal><a href=#__codelineno-0-53> 53</a></span>
 <span class=normal><a href=#__codelineno-0-54> 54</a></span>
@@ -120,89 +112,97 @@
 <span class=normal><a href=#__codelineno-0-122>122</a></span>
 <span class=normal><a href=#__codelineno-0-123>123</a></span>
 <span class=normal><a href=#__codelineno-0-124>124</a></span>
-<span class=normal><a href=#__codelineno-0-125>125</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-43 name=__codelineno-0-43></a><span class=nd>@app</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=s2>&quot;/predict/tarot-interpretations&quot;</span><span class=p>,</span> <span class=n>response_model</span><span class=o>=</span><span class=n>TarotAPIResponse</span><span class=p>,</span> <span class=n>tags</span><span class=o>=</span><span class=p>[</span><span class=s2>&quot;Predict API&quot;</span><span class=p>])</span>
-<a id=__codelineno-0-44 name=__codelineno-0-44></a><span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>predict_tarot_interpretations</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n>TarotAPIRequest</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>TarotAPIResponse</span><span class=p>:</span>
-<a id=__codelineno-0-45 name=__codelineno-0-45></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
-<a id=__codelineno-0-46 name=__codelineno-0-46></a><span class=sd>    | Method | Path                             | Description                                       |</span>
-<a id=__codelineno-0-47 name=__codelineno-0-47></a><span class=sd>    | ------ | -------------------------------- | ------------------------------------------------- |</span>
-<a id=__codelineno-0-48 name=__codelineno-0-48></a><span class=sd>    | `POST` | `/predict/tarot-interpretations` | Get tarot interpretations</span>
-<a id=__codelineno-0-49 name=__codelineno-0-49></a>
-<a id=__codelineno-0-50 name=__codelineno-0-50></a><span class=sd>    Params:</span>
-<a id=__codelineno-0-51 name=__codelineno-0-51></a><span class=sd>        request (TarotAPIRequest): The request object containing the name, question, past_card, present_card, and future_card.</span>
-<a id=__codelineno-0-52 name=__codelineno-0-52></a>
-<a id=__codelineno-0-53 name=__codelineno-0-53></a><span class=sd>    Returns:</span>
-<a id=__codelineno-0-54 name=__codelineno-0-54></a><span class=sd>        TarotAPIResponse: The response object containing the name, question, and interpretations.</span>
-<a id=__codelineno-0-55 name=__codelineno-0-55></a>
-<a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=sd>    !!! note</span>
-<a id=__codelineno-0-57 name=__codelineno-0-57></a><span class=sd>        This function uses the `TarotReader` module to get the tarot interpretations.</span>
-<a id=__codelineno-0-58 name=__codelineno-0-58></a>
-<a id=__codelineno-0-59 name=__codelineno-0-59></a><span class=sd>    !!! example &quot;Example Request&quot;</span>
+<span class=normal><a href=#__codelineno-0-125>125</a></span>
+<span class=normal><a href=#__codelineno-0-126>126</a></span>
+<span class=normal><a href=#__codelineno-0-127>127</a></span>
+<span class=normal><a href=#__codelineno-0-128>128</a></span>
+<span class=normal><a href=#__codelineno-0-129>129</a></span>
+<span class=normal><a href=#__codelineno-0-130>130</a></span>
+<span class=normal><a href=#__codelineno-0-131>131</a></span>
+<span class=normal><a href=#__codelineno-0-132>132</a></span>
+<span class=normal><a href=#__codelineno-0-133>133</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-51 name=__codelineno-0-51></a><span class=nd>@app</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=s2>&quot;/predict/tarot-interpretations&quot;</span><span class=p>,</span> <span class=n>response_model</span><span class=o>=</span><span class=n>TarotAPIResponse</span><span class=p>,</span> <span class=n>tags</span><span class=o>=</span><span class=p>[</span><span class=s2>&quot;Predict API&quot;</span><span class=p>])</span>
+<a id=__codelineno-0-52 name=__codelineno-0-52></a><span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>predict_tarot_interpretations</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n>TarotAPIRequest</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>TarotAPIResponse</span><span class=p>:</span>
+<a id=__codelineno-0-53 name=__codelineno-0-53></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-0-54 name=__codelineno-0-54></a><span class=sd>    | Method | Path                             | Description                                       |</span>
+<a id=__codelineno-0-55 name=__codelineno-0-55></a><span class=sd>    | ------ | -------------------------------- | ------------------------------------------------- |</span>
+<a id=__codelineno-0-56 name=__codelineno-0-56></a><span class=sd>    | `POST` | `/predict/tarot-interpretations` | Get tarot interpretations</span>
+<a id=__codelineno-0-57 name=__codelineno-0-57></a>
+<a id=__codelineno-0-58 name=__codelineno-0-58></a><span class=sd>    Params:</span>
+<a id=__codelineno-0-59 name=__codelineno-0-59></a><span class=sd>        request (TarotAPIRequest): The request object containing the name, question, past_card, present_card, and future_card.</span>
 <a id=__codelineno-0-60 name=__codelineno-0-60></a>
-<a id=__codelineno-0-61 name=__codelineno-0-61></a><span class=sd>        ```json</span>
-<a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=sd>        {</span>
-<a id=__codelineno-0-63 name=__codelineno-0-63></a><span class=sd>            &quot;name&quot;: &quot;John Doe&quot;,</span>
-<a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=sd>            &quot;question&quot;: &quot;Will my current love last forever?&quot;,</span>
-<a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=sd>            &quot;past_card&quot;: {</span>
-<a id=__codelineno-0-66 name=__codelineno-0-66></a><span class=sd>                &quot;name&quot; : &quot;Chariot&quot;,</span>
-<a id=__codelineno-0-67 name=__codelineno-0-67></a><span class=sd>                &quot;is_upright&quot; : false</span>
-<a id=__codelineno-0-68 name=__codelineno-0-68></a><span class=sd>            },</span>
-<a id=__codelineno-0-69 name=__codelineno-0-69></a><span class=sd>            &quot;present_card&quot;: {</span>
-<a id=__codelineno-0-70 name=__codelineno-0-70></a><span class=sd>                &quot;name&quot; : &quot;The Fool&quot;,</span>
-<a id=__codelineno-0-71 name=__codelineno-0-71></a><span class=sd>                &quot;is_upright&quot; : true</span>
-<a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=sd>            },</span>
-<a id=__codelineno-0-73 name=__codelineno-0-73></a><span class=sd>            &quot;future_card&quot;: {</span>
-<a id=__codelineno-0-74 name=__codelineno-0-74></a><span class=sd>                &quot;name&quot; : &quot;The Magician&quot;,</span>
-<a id=__codelineno-0-75 name=__codelineno-0-75></a><span class=sd>                &quot;is_upright&quot; : true</span>
-<a id=__codelineno-0-76 name=__codelineno-0-76></a><span class=sd>            }</span>
-<a id=__codelineno-0-77 name=__codelineno-0-77></a><span class=sd>        }</span>
-<a id=__codelineno-0-78 name=__codelineno-0-78></a><span class=sd>        ```</span>
-<a id=__codelineno-0-79 name=__codelineno-0-79></a>
-<a id=__codelineno-0-80 name=__codelineno-0-80></a><span class=sd>    !!! example &quot;Example Response&quot;</span>
-<a id=__codelineno-0-81 name=__codelineno-0-81></a>
-<a id=__codelineno-0-82 name=__codelineno-0-82></a><span class=sd>        ```json</span>
-<a id=__codelineno-0-83 name=__codelineno-0-83></a><span class=sd>        {</span>
-<a id=__codelineno-0-84 name=__codelineno-0-84></a><span class=sd>            &quot;interpretations&quot;: [</span>
-<a id=__codelineno-0-85 name=__codelineno-0-85></a><span class=sd>                {</span>
-<a id=__codelineno-0-86 name=__codelineno-0-86></a><span class=sd>                    &quot;card_name&quot;: &quot;Chariot (Reversed)&quot;,</span>
-<a id=__codelineno-0-87 name=__codelineno-0-87></a><span class=sd>                    &quot;position&quot;: &quot;past&quot;,</span>
-<a id=__codelineno-0-88 name=__codelineno-0-88></a><span class=sd>                    &quot;orientation&quot;: &quot;ureversed&quot;,</span>
-<a id=__codelineno-0-89 name=__codelineno-0-89></a><span class=sd>                    &quot;meaning&quot;: &quot;Past influence:...&quot;,</span>
-<a id=__codelineno-0-90 name=__codelineno-0-90></a><span class=sd>                },</span>
-<a id=__codelineno-0-91 name=__codelineno-0-91></a><span class=sd>                {</span>
-<a id=__codelineno-0-92 name=__codelineno-0-92></a><span class=sd>                    &quot;card_name&quot;: &quot;The Fool (Upright)&quot;,</span>
-<a id=__codelineno-0-93 name=__codelineno-0-93></a><span class=sd>                    &quot;position&quot;: &quot;present&quot;,</span>
-<a id=__codelineno-0-94 name=__codelineno-0-94></a><span class=sd>                    &quot;orientation&quot;: &quot;upright&quot;,</span>
-<a id=__codelineno-0-95 name=__codelineno-0-95></a><span class=sd>                    &quot;meaning&quot;: &quot;Present situation:...&quot;,</span>
-<a id=__codelineno-0-96 name=__codelineno-0-96></a><span class=sd>                },</span>
-<a id=__codelineno-0-97 name=__codelineno-0-97></a><span class=sd>                {</span>
-<a id=__codelineno-0-98 name=__codelineno-0-98></a><span class=sd>                    &quot;card_name&quot;: &quot;The Magician (Upright)&quot;,</span>
-<a id=__codelineno-0-99 name=__codelineno-0-99></a><span class=sd>                    &quot;position&quot;: &quot;future&quot;,</span>
-<a id=__codelineno-0-100 name=__codelineno-0-100></a><span class=sd>                    &quot;orientation&quot;: &quot;upright&quot;,</span>
-<a id=__codelineno-0-101 name=__codelineno-0-101></a><span class=sd>                    &quot;meaning&quot;: &quot;Future outlook:...&quot;,</span>
-<a id=__codelineno-0-102 name=__codelineno-0-102></a><span class=sd>                },</span>
-<a id=__codelineno-0-103 name=__codelineno-0-103></a><span class=sd>            ],</span>
-<a id=__codelineno-0-104 name=__codelineno-0-104></a><span class=sd>            &quot;summary&quot;: &quot;...&quot;</span>
-<a id=__codelineno-0-105 name=__codelineno-0-105></a><span class=sd>        }</span>
-<a id=__codelineno-0-106 name=__codelineno-0-106></a><span class=sd>        ```</span>
-<a id=__codelineno-0-107 name=__codelineno-0-107></a><span class=sd>    &quot;&quot;&quot;</span>
-<a id=__codelineno-0-108 name=__codelineno-0-108></a>    <span class=k>try</span><span class=p>:</span>
-<a id=__codelineno-0-109 name=__codelineno-0-109></a>        <span class=n>interpretations</span><span class=p>,</span> <span class=n>summary</span> <span class=o>=</span> <span class=k>await</span> <span class=n>TAROT_READER</span><span class=o>.</span><span class=n>generate_reading</span><span class=p>(</span>
-<a id=__codelineno-0-110 name=__codelineno-0-110></a>            <span class=n>name</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>name</span><span class=p>,</span>
-<a id=__codelineno-0-111 name=__codelineno-0-111></a>            <span class=n>question</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>question</span><span class=p>,</span>
-<a id=__codelineno-0-112 name=__codelineno-0-112></a>            <span class=n>past_card</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>past_card</span><span class=p>,</span>
-<a id=__codelineno-0-113 name=__codelineno-0-113></a>            <span class=n>present_card</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>present_card</span><span class=p>,</span>
-<a id=__codelineno-0-114 name=__codelineno-0-114></a>            <span class=n>future_card</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>future_card</span><span class=p>,</span>
-<a id=__codelineno-0-115 name=__codelineno-0-115></a>        <span class=p>)</span>
-<a id=__codelineno-0-116 name=__codelineno-0-116></a>
-<a id=__codelineno-0-117 name=__codelineno-0-117></a>        <span class=k>return</span> <span class=n>TarotAPIResponse</span><span class=p>(</span>
-<a id=__codelineno-0-118 name=__codelineno-0-118></a>            <span class=n>interpretations</span><span class=o>=</span><span class=n>interpretations</span><span class=p>,</span>
-<a id=__codelineno-0-119 name=__codelineno-0-119></a>            <span class=n>summary</span><span class=o>=</span><span class=n>summary</span><span class=p>,</span>
-<a id=__codelineno-0-120 name=__codelineno-0-120></a>        <span class=p>)</span>
-<a id=__codelineno-0-121 name=__codelineno-0-121></a>
-<a id=__codelineno-0-122 name=__codelineno-0-122></a>    <span class=k>except</span> <span class=n>HTTPException</span><span class=p>:</span>
-<a id=__codelineno-0-123 name=__codelineno-0-123></a>        <span class=k>raise</span>
-<a id=__codelineno-0-124 name=__codelineno-0-124></a>    <span class=k>except</span> <span class=ne>Exception</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
-<a id=__codelineno-0-125 name=__codelineno-0-125></a>        <span class=k>raise</span> <span class=n>HTTPException</span><span class=p>(</span><span class=n>status_code</span><span class=o>=</span><span class=mi>500</span><span class=p>,</span> <span class=n>detail</span><span class=o>=</span><span class=sa>f</span><span class=s2>&quot;Internal Server Error: </span><span class=si>{</span><span class=nb>str</span><span class=p>(</span><span class=n>e</span><span class=p>)</span><span class=si>}</span><span class=s2>&quot;</span><span class=p>)</span>
+<a id=__codelineno-0-61 name=__codelineno-0-61></a><span class=sd>    Returns:</span>
+<a id=__codelineno-0-62 name=__codelineno-0-62></a><span class=sd>        TarotAPIResponse: The response object containing the name, question, and interpretations.</span>
+<a id=__codelineno-0-63 name=__codelineno-0-63></a>
+<a id=__codelineno-0-64 name=__codelineno-0-64></a><span class=sd>    !!! note</span>
+<a id=__codelineno-0-65 name=__codelineno-0-65></a><span class=sd>        This function uses the `TarotReader` module to get the tarot interpretations.</span>
+<a id=__codelineno-0-66 name=__codelineno-0-66></a>
+<a id=__codelineno-0-67 name=__codelineno-0-67></a><span class=sd>    !!! example &quot;Example Request&quot;</span>
+<a id=__codelineno-0-68 name=__codelineno-0-68></a>
+<a id=__codelineno-0-69 name=__codelineno-0-69></a><span class=sd>        ```json</span>
+<a id=__codelineno-0-70 name=__codelineno-0-70></a><span class=sd>        {</span>
+<a id=__codelineno-0-71 name=__codelineno-0-71></a><span class=sd>            &quot;name&quot;: &quot;John Doe&quot;,</span>
+<a id=__codelineno-0-72 name=__codelineno-0-72></a><span class=sd>            &quot;question&quot;: &quot;Will my current love last forever?&quot;,</span>
+<a id=__codelineno-0-73 name=__codelineno-0-73></a><span class=sd>            &quot;past_card&quot;: {</span>
+<a id=__codelineno-0-74 name=__codelineno-0-74></a><span class=sd>                &quot;name&quot; : &quot;Chariot&quot;,</span>
+<a id=__codelineno-0-75 name=__codelineno-0-75></a><span class=sd>                &quot;is_upright&quot; : false</span>
+<a id=__codelineno-0-76 name=__codelineno-0-76></a><span class=sd>            },</span>
+<a id=__codelineno-0-77 name=__codelineno-0-77></a><span class=sd>            &quot;present_card&quot;: {</span>
+<a id=__codelineno-0-78 name=__codelineno-0-78></a><span class=sd>                &quot;name&quot; : &quot;The Fool&quot;,</span>
+<a id=__codelineno-0-79 name=__codelineno-0-79></a><span class=sd>                &quot;is_upright&quot; : true</span>
+<a id=__codelineno-0-80 name=__codelineno-0-80></a><span class=sd>            },</span>
+<a id=__codelineno-0-81 name=__codelineno-0-81></a><span class=sd>            &quot;future_card&quot;: {</span>
+<a id=__codelineno-0-82 name=__codelineno-0-82></a><span class=sd>                &quot;name&quot; : &quot;The Magician&quot;,</span>
+<a id=__codelineno-0-83 name=__codelineno-0-83></a><span class=sd>                &quot;is_upright&quot; : true</span>
+<a id=__codelineno-0-84 name=__codelineno-0-84></a><span class=sd>            }</span>
+<a id=__codelineno-0-85 name=__codelineno-0-85></a><span class=sd>        }</span>
+<a id=__codelineno-0-86 name=__codelineno-0-86></a><span class=sd>        ```</span>
+<a id=__codelineno-0-87 name=__codelineno-0-87></a>
+<a id=__codelineno-0-88 name=__codelineno-0-88></a><span class=sd>    !!! example &quot;Example Response&quot;</span>
+<a id=__codelineno-0-89 name=__codelineno-0-89></a>
+<a id=__codelineno-0-90 name=__codelineno-0-90></a><span class=sd>        ```json</span>
+<a id=__codelineno-0-91 name=__codelineno-0-91></a><span class=sd>        {</span>
+<a id=__codelineno-0-92 name=__codelineno-0-92></a><span class=sd>            &quot;interpretations&quot;: [</span>
+<a id=__codelineno-0-93 name=__codelineno-0-93></a><span class=sd>                {</span>
+<a id=__codelineno-0-94 name=__codelineno-0-94></a><span class=sd>                    &quot;card_name&quot;: &quot;Chariot (Reversed)&quot;,</span>
+<a id=__codelineno-0-95 name=__codelineno-0-95></a><span class=sd>                    &quot;position&quot;: &quot;past&quot;,</span>
+<a id=__codelineno-0-96 name=__codelineno-0-96></a><span class=sd>                    &quot;orientation&quot;: &quot;ureversed&quot;,</span>
+<a id=__codelineno-0-97 name=__codelineno-0-97></a><span class=sd>                    &quot;meaning&quot;: &quot;Past influence:...&quot;,</span>
+<a id=__codelineno-0-98 name=__codelineno-0-98></a><span class=sd>                },</span>
+<a id=__codelineno-0-99 name=__codelineno-0-99></a><span class=sd>                {</span>
+<a id=__codelineno-0-100 name=__codelineno-0-100></a><span class=sd>                    &quot;card_name&quot;: &quot;The Fool (Upright)&quot;,</span>
+<a id=__codelineno-0-101 name=__codelineno-0-101></a><span class=sd>                    &quot;position&quot;: &quot;present&quot;,</span>
+<a id=__codelineno-0-102 name=__codelineno-0-102></a><span class=sd>                    &quot;orientation&quot;: &quot;upright&quot;,</span>
+<a id=__codelineno-0-103 name=__codelineno-0-103></a><span class=sd>                    &quot;meaning&quot;: &quot;Present situation:...&quot;,</span>
+<a id=__codelineno-0-104 name=__codelineno-0-104></a><span class=sd>                },</span>
+<a id=__codelineno-0-105 name=__codelineno-0-105></a><span class=sd>                {</span>
+<a id=__codelineno-0-106 name=__codelineno-0-106></a><span class=sd>                    &quot;card_name&quot;: &quot;The Magician (Upright)&quot;,</span>
+<a id=__codelineno-0-107 name=__codelineno-0-107></a><span class=sd>                    &quot;position&quot;: &quot;future&quot;,</span>
+<a id=__codelineno-0-108 name=__codelineno-0-108></a><span class=sd>                    &quot;orientation&quot;: &quot;upright&quot;,</span>
+<a id=__codelineno-0-109 name=__codelineno-0-109></a><span class=sd>                    &quot;meaning&quot;: &quot;Future outlook:...&quot;,</span>
+<a id=__codelineno-0-110 name=__codelineno-0-110></a><span class=sd>                },</span>
+<a id=__codelineno-0-111 name=__codelineno-0-111></a><span class=sd>            ],</span>
+<a id=__codelineno-0-112 name=__codelineno-0-112></a><span class=sd>            &quot;summary&quot;: &quot;...&quot;</span>
+<a id=__codelineno-0-113 name=__codelineno-0-113></a><span class=sd>        }</span>
+<a id=__codelineno-0-114 name=__codelineno-0-114></a><span class=sd>        ```</span>
+<a id=__codelineno-0-115 name=__codelineno-0-115></a><span class=sd>    &quot;&quot;&quot;</span>
+<a id=__codelineno-0-116 name=__codelineno-0-116></a>    <span class=k>try</span><span class=p>:</span>
+<a id=__codelineno-0-117 name=__codelineno-0-117></a>        <span class=n>interpretations</span><span class=p>,</span> <span class=n>summary</span> <span class=o>=</span> <span class=k>await</span> <span class=n>TAROT_READER</span><span class=o>.</span><span class=n>generate_reading</span><span class=p>(</span>
+<a id=__codelineno-0-118 name=__codelineno-0-118></a>            <span class=n>name</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>name</span><span class=p>,</span>
+<a id=__codelineno-0-119 name=__codelineno-0-119></a>            <span class=n>question</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>question</span><span class=p>,</span>
+<a id=__codelineno-0-120 name=__codelineno-0-120></a>            <span class=n>past_card</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>past_card</span><span class=p>,</span>
+<a id=__codelineno-0-121 name=__codelineno-0-121></a>            <span class=n>present_card</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>present_card</span><span class=p>,</span>
+<a id=__codelineno-0-122 name=__codelineno-0-122></a>            <span class=n>future_card</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>future_card</span><span class=p>,</span>
+<a id=__codelineno-0-123 name=__codelineno-0-123></a>        <span class=p>)</span>
+<a id=__codelineno-0-124 name=__codelineno-0-124></a>
+<a id=__codelineno-0-125 name=__codelineno-0-125></a>        <span class=k>return</span> <span class=n>TarotAPIResponse</span><span class=p>(</span>
+<a id=__codelineno-0-126 name=__codelineno-0-126></a>            <span class=n>interpretations</span><span class=o>=</span><span class=n>interpretations</span><span class=p>,</span>
+<a id=__codelineno-0-127 name=__codelineno-0-127></a>            <span class=n>summary</span><span class=o>=</span><span class=n>summary</span><span class=p>,</span>
+<a id=__codelineno-0-128 name=__codelineno-0-128></a>        <span class=p>)</span>
+<a id=__codelineno-0-129 name=__codelineno-0-129></a>
+<a id=__codelineno-0-130 name=__codelineno-0-130></a>    <span class=k>except</span> <span class=n>HTTPException</span><span class=p>:</span>
+<a id=__codelineno-0-131 name=__codelineno-0-131></a>        <span class=k>raise</span>
+<a id=__codelineno-0-132 name=__codelineno-0-132></a>    <span class=k>except</span> <span class=ne>Exception</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
+<a id=__codelineno-0-133 name=__codelineno-0-133></a>        <span class=k>raise</span> <span class=n>HTTPException</span><span class=p>(</span><span class=n>status_code</span><span class=o>=</span><span class=mi>500</span><span class=p>,</span> <span class=n>detail</span><span class=o>=</span><span class=sa>f</span><span class=s2>&quot;Internal Server Error: </span><span class=si>{</span><span class=nb>str</span><span class=p>(</span><span class=n>e</span><span class=p>)</span><span class=si>}</span><span class=s2>&quot;</span><span class=p>)</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h3 id=index.predict_numerology_interpretations class="doc doc-heading"> <code class="doc-symbol doc-symbol-heading doc-symbol-function"></code> <span class="doc doc-object-name doc-function-name">predict_numerology_interpretations</span> <span class="doc doc-labels"> <small class="doc doc-label doc-label-async"><code>async</code></small> </span> </h3> <div class="doc-signature highlight"><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=nf>predict_numerology_interpretations</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n><span title=api.models.NumerologyAPIRequest>NumerologyAPIRequest</span></span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n><span title=api.models.NumerologyAPIResponse>NumerologyAPIResponse</span></span>
 </code></pre></div> <div class="doc doc-contents first"> <table> <thead> <tr> <th>Method</th> <th>Path</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><code>POST</code></td> <td><code>/predict/numerology-interpretations</code></td> <td>Get numerology interpretations and meanings</td> </tr> </tbody> </table> <table> <thead> <tr> <th><span class=doc-section-title>PARAMETER</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td> <code>request</code> </td> <td class=doc-param-details> <div class=doc-md-description> <p>The request object containing the name, dob, and question.</p> </div> <p> <span class=doc-param-annotation> <b>TYPE:</b> <code><span title=api.models.NumerologyAPIRequest>NumerologyAPIRequest</span></code> </span> </p> </td> </tr> </tbody> </table> <table> <thead> <tr> <th><span class=doc-section-title>RETURNS</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td> <code>NumerologyAPIResponse</code> </td> <td class=doc-returns-details> <div class=doc-md-description> <p>The response object containing the numerology meaning.</p> </div> <p> <span class=doc-returns-annotation> <b>TYPE:</b> <code><span title=api.models.NumerologyAPIResponse>NumerologyAPIResponse</span></code> </span> </p> </td> </tr> </tbody> </table> <div class="admonition note"> <p class=admonition-title>Note</p> <p>This function uses the <code>NumerologyReader</code> module to get the numerology meaning.</p> </div> <div class="admonition example"> <p class=admonition-title>Example Request</p> <div class=highlight><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=p>{</span>
 <a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a><span class=w>    </span><span class=nt>&quot;name&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;John Doe&quot;</span><span class=p>,</span>
@@ -212,15 +212,7 @@
 </code></pre></div> </div> <div class="admonition example"> <p class=admonition-title>Example Response</p> <div class=highlight><pre><span></span><code><a id=__codelineno-1-1 name=__codelineno-1-1 href=#__codelineno-1-1></a><span class=p>{</span>
 <a id=__codelineno-1-2 name=__codelineno-1-2 href=#__codelineno-1-2></a><span class=w>    </span><span class=nt>&quot;numerology_meaning&quot;</span><span class=p>:</span><span class=w> </span><span class=s2>&quot;...&quot;</span>
 <a id=__codelineno-1-3 name=__codelineno-1-3 href=#__codelineno-1-3></a><span class=p>}</span>
-</code></pre></div> </div> <details class=quote> <summary>Source code in <code>api/index.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-128>128</a></span>
-<span class=normal><a href=#__codelineno-0-129>129</a></span>
-<span class=normal><a href=#__codelineno-0-130>130</a></span>
-<span class=normal><a href=#__codelineno-0-131>131</a></span>
-<span class=normal><a href=#__codelineno-0-132>132</a></span>
-<span class=normal><a href=#__codelineno-0-133>133</a></span>
-<span class=normal><a href=#__codelineno-0-134>134</a></span>
-<span class=normal><a href=#__codelineno-0-135>135</a></span>
-<span class=normal><a href=#__codelineno-0-136>136</a></span>
+</code></pre></div> </div> <details class=quote> <summary>Source code in <code>api/index.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal><a href=#__codelineno-0-136>136</a></span>
 <span class=normal><a href=#__codelineno-0-137>137</a></span>
 <span class=normal><a href=#__codelineno-0-138>138</a></span>
 <span class=normal><a href=#__codelineno-0-139>139</a></span>
@@ -258,53 +250,61 @@
 <span class=normal><a href=#__codelineno-0-171>171</a></span>
 <span class=normal><a href=#__codelineno-0-172>172</a></span>
 <span class=normal><a href=#__codelineno-0-173>173</a></span>
-<span class=normal><a href=#__codelineno-0-174>174</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-128 name=__codelineno-0-128></a><span class=nd>@app</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=s2>&quot;/predict/numerology-interpretations&quot;</span><span class=p>,</span> <span class=n>response_model</span><span class=o>=</span><span class=n>NumerologyAPIResponse</span><span class=p>,</span> <span class=n>tags</span><span class=o>=</span><span class=p>[</span><span class=s2>&quot;Predict API&quot;</span><span class=p>])</span>
-<a id=__codelineno-0-129 name=__codelineno-0-129></a><span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>predict_numerology_interpretations</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n>NumerologyAPIRequest</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NumerologyAPIResponse</span><span class=p>:</span>
-<a id=__codelineno-0-130 name=__codelineno-0-130></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
-<a id=__codelineno-0-131 name=__codelineno-0-131></a><span class=sd>    | Method | Path                                  | Description                                 |</span>
-<a id=__codelineno-0-132 name=__codelineno-0-132></a><span class=sd>    | ------ | ------------------------------------- | ------------------------------------------- |</span>
-<a id=__codelineno-0-133 name=__codelineno-0-133></a><span class=sd>    | `POST` | `/predict/numerology-interpretations` | Get numerology interpretations and meanings |</span>
-<a id=__codelineno-0-134 name=__codelineno-0-134></a>
-<a id=__codelineno-0-135 name=__codelineno-0-135></a><span class=sd>    Params:</span>
-<a id=__codelineno-0-136 name=__codelineno-0-136></a><span class=sd>        request (NumerologyAPIRequest): The request object containing the name, dob, and question.</span>
-<a id=__codelineno-0-137 name=__codelineno-0-137></a>
-<a id=__codelineno-0-138 name=__codelineno-0-138></a><span class=sd>    Returns:</span>
-<a id=__codelineno-0-139 name=__codelineno-0-139></a><span class=sd>        NumerologyAPIResponse: The response object containing the numerology meaning.</span>
-<a id=__codelineno-0-140 name=__codelineno-0-140></a>
-<a id=__codelineno-0-141 name=__codelineno-0-141></a><span class=sd>    !!! note</span>
-<a id=__codelineno-0-142 name=__codelineno-0-142></a><span class=sd>        This function uses the `NumerologyReader` module to get the numerology meaning.</span>
-<a id=__codelineno-0-143 name=__codelineno-0-143></a>
-<a id=__codelineno-0-144 name=__codelineno-0-144></a><span class=sd>    !!! example &quot;Example Request&quot;</span>
+<span class=normal><a href=#__codelineno-0-174>174</a></span>
+<span class=normal><a href=#__codelineno-0-175>175</a></span>
+<span class=normal><a href=#__codelineno-0-176>176</a></span>
+<span class=normal><a href=#__codelineno-0-177>177</a></span>
+<span class=normal><a href=#__codelineno-0-178>178</a></span>
+<span class=normal><a href=#__codelineno-0-179>179</a></span>
+<span class=normal><a href=#__codelineno-0-180>180</a></span>
+<span class=normal><a href=#__codelineno-0-181>181</a></span>
+<span class=normal><a href=#__codelineno-0-182>182</a></span></pre></div></td><td class=code><div><pre><span></span><code><a id=__codelineno-0-136 name=__codelineno-0-136></a><span class=nd>@app</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=s2>&quot;/predict/numerology-interpretations&quot;</span><span class=p>,</span> <span class=n>response_model</span><span class=o>=</span><span class=n>NumerologyAPIResponse</span><span class=p>,</span> <span class=n>tags</span><span class=o>=</span><span class=p>[</span><span class=s2>&quot;Predict API&quot;</span><span class=p>])</span>
+<a id=__codelineno-0-137 name=__codelineno-0-137></a><span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>predict_numerology_interpretations</span><span class=p>(</span><span class=n>request</span><span class=p>:</span> <span class=n>NumerologyAPIRequest</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>NumerologyAPIResponse</span><span class=p>:</span>
+<a id=__codelineno-0-138 name=__codelineno-0-138></a><span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<a id=__codelineno-0-139 name=__codelineno-0-139></a><span class=sd>    | Method | Path                                  | Description                                 |</span>
+<a id=__codelineno-0-140 name=__codelineno-0-140></a><span class=sd>    | ------ | ------------------------------------- | ------------------------------------------- |</span>
+<a id=__codelineno-0-141 name=__codelineno-0-141></a><span class=sd>    | `POST` | `/predict/numerology-interpretations` | Get numerology interpretations and meanings |</span>
+<a id=__codelineno-0-142 name=__codelineno-0-142></a>
+<a id=__codelineno-0-143 name=__codelineno-0-143></a><span class=sd>    Params:</span>
+<a id=__codelineno-0-144 name=__codelineno-0-144></a><span class=sd>        request (NumerologyAPIRequest): The request object containing the name, dob, and question.</span>
 <a id=__codelineno-0-145 name=__codelineno-0-145></a>
-<a id=__codelineno-0-146 name=__codelineno-0-146></a><span class=sd>        ```json</span>
-<a id=__codelineno-0-147 name=__codelineno-0-147></a><span class=sd>        {</span>
-<a id=__codelineno-0-148 name=__codelineno-0-148></a><span class=sd>            &quot;name&quot;: &quot;John Doe&quot;,</span>
-<a id=__codelineno-0-149 name=__codelineno-0-149></a><span class=sd>            &quot;dob&quot;: &quot;1990-01-01&quot;,</span>
-<a id=__codelineno-0-150 name=__codelineno-0-150></a><span class=sd>            &quot;question&quot;: &quot;Will my current love last forever?&quot;</span>
-<a id=__codelineno-0-151 name=__codelineno-0-151></a><span class=sd>        }</span>
-<a id=__codelineno-0-152 name=__codelineno-0-152></a><span class=sd>        ```</span>
+<a id=__codelineno-0-146 name=__codelineno-0-146></a><span class=sd>    Returns:</span>
+<a id=__codelineno-0-147 name=__codelineno-0-147></a><span class=sd>        NumerologyAPIResponse: The response object containing the numerology meaning.</span>
+<a id=__codelineno-0-148 name=__codelineno-0-148></a>
+<a id=__codelineno-0-149 name=__codelineno-0-149></a><span class=sd>    !!! note</span>
+<a id=__codelineno-0-150 name=__codelineno-0-150></a><span class=sd>        This function uses the `NumerologyReader` module to get the numerology meaning.</span>
+<a id=__codelineno-0-151 name=__codelineno-0-151></a>
+<a id=__codelineno-0-152 name=__codelineno-0-152></a><span class=sd>    !!! example &quot;Example Request&quot;</span>
 <a id=__codelineno-0-153 name=__codelineno-0-153></a>
-<a id=__codelineno-0-154 name=__codelineno-0-154></a><span class=sd>    !!! example &quot;Example Response&quot;</span>
-<a id=__codelineno-0-155 name=__codelineno-0-155></a>
-<a id=__codelineno-0-156 name=__codelineno-0-156></a><span class=sd>        ```json</span>
-<a id=__codelineno-0-157 name=__codelineno-0-157></a><span class=sd>        {</span>
-<a id=__codelineno-0-158 name=__codelineno-0-158></a><span class=sd>            &quot;numerology_meaning&quot;: &quot;...&quot;</span>
+<a id=__codelineno-0-154 name=__codelineno-0-154></a><span class=sd>        ```json</span>
+<a id=__codelineno-0-155 name=__codelineno-0-155></a><span class=sd>        {</span>
+<a id=__codelineno-0-156 name=__codelineno-0-156></a><span class=sd>            &quot;name&quot;: &quot;John Doe&quot;,</span>
+<a id=__codelineno-0-157 name=__codelineno-0-157></a><span class=sd>            &quot;dob&quot;: &quot;1990-01-01&quot;,</span>
+<a id=__codelineno-0-158 name=__codelineno-0-158></a><span class=sd>            &quot;question&quot;: &quot;Will my current love last forever?&quot;</span>
 <a id=__codelineno-0-159 name=__codelineno-0-159></a><span class=sd>        }</span>
 <a id=__codelineno-0-160 name=__codelineno-0-160></a><span class=sd>        ```</span>
-<a id=__codelineno-0-161 name=__codelineno-0-161></a><span class=sd>    &quot;&quot;&quot;</span>
-<a id=__codelineno-0-162 name=__codelineno-0-162></a>    <span class=k>try</span><span class=p>:</span>
-<a id=__codelineno-0-163 name=__codelineno-0-163></a>        <span class=n>numerology_meaning</span> <span class=o>=</span> <span class=k>await</span> <span class=n>NUMEROLOGY_READER</span><span class=o>.</span><span class=n>analyze</span><span class=p>(</span>
-<a id=__codelineno-0-164 name=__codelineno-0-164></a>            <span class=n>name</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>name</span><span class=p>,</span>
-<a id=__codelineno-0-165 name=__codelineno-0-165></a>            <span class=n>dob</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>dob</span><span class=p>,</span>
-<a id=__codelineno-0-166 name=__codelineno-0-166></a>            <span class=n>question</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>question</span><span class=p>,</span>
-<a id=__codelineno-0-167 name=__codelineno-0-167></a>        <span class=p>)</span>
-<a id=__codelineno-0-168 name=__codelineno-0-168></a>
-<a id=__codelineno-0-169 name=__codelineno-0-169></a>        <span class=k>return</span> <span class=n>NumerologyAPIResponse</span><span class=p>(</span><span class=n>numerology_meaning</span><span class=o>=</span><span class=n>numerology_meaning</span><span class=p>)</span>
-<a id=__codelineno-0-170 name=__codelineno-0-170></a>
-<a id=__codelineno-0-171 name=__codelineno-0-171></a>    <span class=k>except</span> <span class=n>HTTPException</span><span class=p>:</span>
-<a id=__codelineno-0-172 name=__codelineno-0-172></a>        <span class=k>raise</span>
-<a id=__codelineno-0-173 name=__codelineno-0-173></a>    <span class=k>except</span> <span class=ne>Exception</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
-<a id=__codelineno-0-174 name=__codelineno-0-174></a>        <span class=k>raise</span> <span class=n>HTTPException</span><span class=p>(</span><span class=n>status_code</span><span class=o>=</span><span class=mi>500</span><span class=p>,</span> <span class=n>detail</span><span class=o>=</span><span class=sa>f</span><span class=s2>&quot;Internal Server Error: </span><span class=si>{</span><span class=nb>str</span><span class=p>(</span><span class=n>e</span><span class=p>)</span><span class=si>}</span><span class=s2>&quot;</span><span class=p>)</span>
+<a id=__codelineno-0-161 name=__codelineno-0-161></a>
+<a id=__codelineno-0-162 name=__codelineno-0-162></a><span class=sd>    !!! example &quot;Example Response&quot;</span>
+<a id=__codelineno-0-163 name=__codelineno-0-163></a>
+<a id=__codelineno-0-164 name=__codelineno-0-164></a><span class=sd>        ```json</span>
+<a id=__codelineno-0-165 name=__codelineno-0-165></a><span class=sd>        {</span>
+<a id=__codelineno-0-166 name=__codelineno-0-166></a><span class=sd>            &quot;numerology_meaning&quot;: &quot;...&quot;</span>
+<a id=__codelineno-0-167 name=__codelineno-0-167></a><span class=sd>        }</span>
+<a id=__codelineno-0-168 name=__codelineno-0-168></a><span class=sd>        ```</span>
+<a id=__codelineno-0-169 name=__codelineno-0-169></a><span class=sd>    &quot;&quot;&quot;</span>
+<a id=__codelineno-0-170 name=__codelineno-0-170></a>    <span class=k>try</span><span class=p>:</span>
+<a id=__codelineno-0-171 name=__codelineno-0-171></a>        <span class=n>numerology_meaning</span> <span class=o>=</span> <span class=k>await</span> <span class=n>NUMEROLOGY_READER</span><span class=o>.</span><span class=n>analyze</span><span class=p>(</span>
+<a id=__codelineno-0-172 name=__codelineno-0-172></a>            <span class=n>name</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>name</span><span class=p>,</span>
+<a id=__codelineno-0-173 name=__codelineno-0-173></a>            <span class=n>dob</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>dob</span><span class=p>,</span>
+<a id=__codelineno-0-174 name=__codelineno-0-174></a>            <span class=n>question</span><span class=o>=</span><span class=n>request</span><span class=o>.</span><span class=n>question</span><span class=p>,</span>
+<a id=__codelineno-0-175 name=__codelineno-0-175></a>        <span class=p>)</span>
+<a id=__codelineno-0-176 name=__codelineno-0-176></a>
+<a id=__codelineno-0-177 name=__codelineno-0-177></a>        <span class=k>return</span> <span class=n>NumerologyAPIResponse</span><span class=p>(</span><span class=n>numerology_meaning</span><span class=o>=</span><span class=n>numerology_meaning</span><span class=p>)</span>
+<a id=__codelineno-0-178 name=__codelineno-0-178></a>
+<a id=__codelineno-0-179 name=__codelineno-0-179></a>    <span class=k>except</span> <span class=n>HTTPException</span><span class=p>:</span>
+<a id=__codelineno-0-180 name=__codelineno-0-180></a>        <span class=k>raise</span>
+<a id=__codelineno-0-181 name=__codelineno-0-181></a>    <span class=k>except</span> <span class=ne>Exception</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
+<a id=__codelineno-0-182 name=__codelineno-0-182></a>        <span class=k>raise</span> <span class=n>HTTPException</span><span class=p>(</span><span class=n>status_code</span><span class=o>=</span><span class=mi>500</span><span class=p>,</span> <span class=n>detail</span><span class=o>=</span><span class=sa>f</span><span class=s2>&quot;Internal Server Error: </span><span class=si>{</span><span class=nb>str</span><span class=p>(</span><span class=n>e</span><span class=p>)</span><span class=si>}</span><span class=s2>&quot;</span><span class=p>)</span>
 </code></pre></div></td></tr></table></div> </details> </div> </div><h2 id=models-reference>Models Reference</h2> <div class="doc doc-object doc-class"> <h3 id=models.TarotAPIRequest class="doc doc-heading"> <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code> <span class="doc doc-object-name doc-class-name">TarotAPIRequest</span> <span class="doc doc-labels"> <small class="doc doc-label doc-label-pydantic-model"><code>pydantic-model</code></small> </span> </h3> <div class="doc doc-contents first"> <details><summary>Show JSON schema:</summary> <div class=highlight><pre><span></span><code><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=p>{</span>
 <a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a><span class=w>  </span><span class=nt>&quot;$defs&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
 <a id=__codelineno-0-3 name=__codelineno-0-3 href=#__codelineno-0-3></a><span class=w>    </span><span class=nt>&quot;TarotCard&quot;</span><span class=p>:</span><span class=w> </span><span class=p>{</span>
